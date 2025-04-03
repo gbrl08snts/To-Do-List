@@ -16,7 +16,7 @@ API desenvolvida com Django e Django REST Framework para o desafio backend da La
 - Python 3.9+
 - Django 4.0+
 - Django REST Framework
-- SQLite (banco padrão)
+- SQLite (banco padrão) e Postgres(Deploy)
 - Docker (containerização opcional)
 
 ## ⚙️ Configuração do Ambiente
@@ -41,6 +41,9 @@ venv\Scripts\activate     # Windows
 
 # Instale as dependências
 pip install -r requirements.txt
+
+# Gere sua Secret Key
+python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
 
 # Aplique as migrações
 python manage.py migrate
